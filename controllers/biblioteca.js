@@ -22,7 +22,7 @@ const getLibroByID = (req, res) => {
 
 const createLibro = (req, res) => {
     const { titulo, autor, fecha_publicacion, genero } = req.body;
-    const portada = req.file ? req.file.path : null;
+    const portada = req.file ? req.file.filename : null;
 
     if (portada) {
         const nuevoLibro = { titulo, autor, fecha_publicacion, genero, portada };
@@ -40,7 +40,7 @@ const createLibro = (req, res) => {
 const updateLibro = (req, res) => {
     const id = req.params.id;
     const { titulo, autor, fecha_publicacion, genero } = req.body;
-    const portada = req.file ? req.file.path : null;
+    const portada = req.file ? req.file.filename : null;
 
     const libroActualizado = { titulo, autor, fecha_publicacion, genero };
     if (portada) {

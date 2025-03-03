@@ -7,21 +7,33 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>Biblioteca de Libros</h1>
+    <div class="container">
+        <div class="container1">
 
-    <form id="form-libro">
-        <h2>Agregar/Editar Libro</h2>
-        <input type="text" id="titulo" placeholder="Título del Libro" required>
-        <input type="text" id="autor" placeholder="Autor del Libro" required>
-        <input type="date" id="fecha_publicacion" placeholder="Fecha de Publicación" required>
-        <input type="text" id="genero" placeholder="Género del Libro" required>
-        <input type="file" id="portada" accept="image/*" required>
-        <button type="submit" id="boton">Guardar</button>
-    </form>
+            <h1>Biblioteca de Libros</h1>
 
-    <h2>Lista de Libros</h2>
-    <div id="data-libros"></div>
+            <form id="form-libro">
+                <h2>Agregar/Editar Libro</h2>
+                <div class="input-style">
+                    <input type="text" id="titulo" placeholder="Título del Libro" required>
+                    <input type="text" id="autor" placeholder="Autor del Libro" required>
+                    <input type="date" id="fecha_publicacion" placeholder="Fecha de Publicación" required>
+                    <input type="text" id="genero" placeholder="Género del Libro" required>
+                    <input type="file" id="portada" accept="image/*" required>
+                </div>
+                <div class="boton">
+                    <button type="submit" id="boton">Guardar</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="container2">
+            <h2>Lista de Libros</h2>
+            <div id="data-libros"></div>
+        </div>
 
+    </div>
+    
     <script src="./javascript/app.js"></script>
 </body>
 </html>

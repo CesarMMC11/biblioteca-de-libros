@@ -32,8 +32,10 @@ function mostrarLibros(libros) {
             <p class='fecha_publicacion'>${libro.fecha_publicacion}</p>
             <p class='genero'>${libro.genero}</p>
             <img src="${libro.portada}" alt="Portada del libro">
+            <div class = 'card-boton'>
             <button value="${libro.id}" onclick="editLibro(${libro.id})">Editar</button>
             <button value="${libro.id}" onclick="deleteLibro(${libro.id})">Eliminar</button>
+            </div>
         `;
 
         dataLibros.appendChild(div);
